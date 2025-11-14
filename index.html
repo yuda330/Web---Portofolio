@@ -1,0 +1,264 @@
+  <!DOCTYPE html>
+  <html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio — Pramudya Yuda Bhakti</title>
+    <meta name="description" content="Portfolio modern Pramudya Yuda Bhakti: game dev, graphic design, dan UI/UX." />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="noscroll">
+    <!-- ===== INTRO (selalu tampil) ===== -->
+    <div id="intro" class="intro" aria-label="Intro">
+      <div class="intro__bg" aria-hidden="true"></div>
+      <div class="intro__inner">
+        <div class="intro__logo" aria-hidden="true">
+          <span class="intro__logo-shine"></span>
+          <span class="intro__logo-text">PY</span>
+        </div>
+        <h1 class="intro__title">
+          <span class="typewriter" aria-label="Pramudya Yuda Bhakti">
+            Pramudya&nbsp;Yuda&nbsp;Bhakti
+          </span>
+        </h1>
+        <p class="intro__tagline">Game Dev • Graphic Design • UI/UX</p>
+        <div class="intro__actions">
+          <button id="enterBtn" class="btn btn--primary">Masuk</button>
+          <button id="skipBtn" class="btn btn--ghost">Lewati</button>
+        </div>
+        <div class="intro__progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <span class="intro__bar" id="introBar"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== SITE ===== -->
+    <main id="site" hidden>
+      <!-- NAV -->
+      <header class="nav">
+        <div class="container nav__inner">
+          <a class="brand" href="#top">Pramudya<span>Yuda</span></a>
+          <nav class="nav__links" id="navLinks">
+            <a href="#about" class="btn btn--sm btn--ghost">About</a>
+            <a href="#portfolio" class="btn btn--sm btn--ghost">Portfolio</a>
+            <a href="#contact" class="btn btn--sm btn--ghost">Contact</a>
+          </nav>
+          <button class="nav__toggle" id="navToggle" aria-label="Buka menu">
+            <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <!-- HERO -->
+      <section id="top" class="hero">
+        <div class="container hero__inner">
+          <div class="hero__text">
+            <h1 class="reveal" data-reveal="up" data-delay="60">
+              <span class="grad-text typewriter-hero" style="--chars:22;">
+                Halo, saya Pramudya Yuda Bhakti
+              </span>
+            </h1>
+            <p class="reveal" data-reveal="up" data-delay="120">
+              Saya merancang dan mengembangkan pengalaman digital yang interaktif dan estetik —
+              memadukan kreativitas desain grafis, logika pengembangan game, dan presisi UI/UX
+              untuk hasil yang imersif dan fungsional.
+            </p>
+            <div class="hero__cta reveal" data-reveal="up" data-delay="180">
+              <a href="#portfolio" class="btn btn--primary">Lihat Portfolio</a>
+              <a href="#contact" class="btn btn--ghost">Hubungi Saya</a>
+            </div>
+          </div>
+          <figure class="hero__img reveal" data-reveal="left" data-delay="120">
+            <img src="assets/Profile/foto_profile.jpg" alt="Foto Profil Pramudya Yuda Bhakti" loading="eager" decoding="async" />
+            <figcaption>Siap Berkolaborasi ✨</figcaption>
+          </figure>
+        </div>
+        <div class="hero__bg">
+          <div class="orb orb--a"></div>
+          <div class="orb orb--b"></div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="section">
+        <div class="container about">
+          <div class="reveal" data-reveal="up">
+            <h2>Tentang Saya</h2>
+            <p>Saya senang mencipta pengalaman yang indah, cepat, dan mudah digunakan. Fokus pada detail, aksesibilitas, dan performa.</p>
+            <ul class="checklist">
+              <li>Game Development (UE5 / prototyping)</li>
+              <li>Graphic Design (branding, visual asset)</li>
+              <li>UI/UX (research, wireframe, high-fidelity)</li>
+            </ul>
+          </div>
+          <div class="stats">
+            <div class="stat reveal" data-reveal="up" data-delay="80"><span>2+</span><p>Tahun pengalaman</p></div>
+            <div class="stat reveal" data-reveal="up" data-delay="160"><span>5</span><p>Project rilis</p></div>
+            <div class="stat reveal" data-reveal="up" data-delay="240"><span>∞</span><p>Semangat belajar</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PORTFOLIO -->
+      <section id="portfolio" class="section">
+        <div class="container">
+          <h2 class="portfolio__title reveal" data-reveal="up">Portofolio Showcase</h2>
+          <p class="portfolio__desc reveal" data-reveal="up" data-delay="80">
+            Jelajahi proyek, sertifikat, dan tools/software yang saya kuasai.
+          </p>
+
+          <div class="tabs reveal" data-reveal="up" data-delay="120">
+            <button class="tab active" data-target="#tab-projects"><span class="tab__icon">〈〉</span><span>Projects</span></button>
+            <button class="tab" data-target="#tab-certificates"><span class="tab__icon">🎓</span><span>Certificates</span></button>
+            <button class="tab" data-target="#tab-software"><span class="tab__icon">⚙️</span><span>Software</span></button>
+          </div>
+
+          <div class="tabpanels">
+            <!-- Projects (3) -->
+            <div id="tab-projects" class="tabpanel active">
+              <div class="gallery">
+                <figure class="gallery__item reveal" data-reveal="up" data-delay="60">
+                  <img src="assets/Project/dinar_coin.jpg" alt="Dashboard Analytics" loading="lazy"/>
+                  <figcaption>Modeling Mata Uang Dinar Coin</figcaption>
+                </figure>
+                <figure class="gallery__item reveal" data-reveal="up" data-delay="120">
+                  <img src="assets/Project/Jalur_evtol.jpg" alt="Fintech Landing" loading="lazy"/>
+                  <figcaption>Pembuatan Simulasi Kendaraan Udara EVTOL</figcaption>
+                </figure>
+                <figure class="gallery__item reveal" data-reveal="up" data-delay="180">
+                  <img src="assets/Project/Virtual_Reality.jpg" alt="E-Commerce UI" loading="lazy"/>
+                  <figcaption>Modeling Gedung CCIT FTUI VR</figcaption>
+                </figure>
+              </div>
+            </div>
+
+            <!-- Certificates (3) -->
+            <div id="tab-certificates" class="tabpanel">
+              <div class="gallery">
+                <figure class="gallery__item reveal" data-reveal="up" data-delay="60">
+                  <img src="assets/sertifikat/Sertifikat_kompetensi.jpg" alt="Front-End" loading="lazy"/>
+                  <figcaption>Sertifikat Kompetensi</figcaption>
+                </figure>
+                <figure class="gallery__item reveal" data-reveal="up" data-delay="120">
+                  <img src="assets/sertifikat/sertifkat_pkl.jpg" alt="React" loading="lazy"/>
+                  <figcaption>Sertifikat PKL</figcaption>
+                </figure>
+                <figure class="gallery__item reveal" data-reveal="up" data-delay="180">
+                  <img src="assets/sertifikat/sertifkat_prakerin.jpg" alt="UX" loading="lazy"/>
+                  <figcaption>Sertifikat Prakerin</figcaption>
+                </figure>
+              </div>
+            </div>
+
+            <!-- Software (3 logo transparan, seragam) -->
+            <div id="tab-software" class="tabpanel">
+              <ul class="software-grid">
+                <li class="software__item reveal" data-reveal="up" data-delay="60">
+                  <div class="software__logo">
+                    <img src="assets/ue_logo.png" alt="Unreal Engine 5" loading="lazy" decoding="async">
+                  </div>
+                  <h4>UNREAL ENGINE 5</h4>
+                </li>
+                <li class="software__item reveal" data-reveal="up" data-delay="120">
+                  <div class="software__logo">
+                    <img src="assets/blender_logo.png" alt="Blender" loading="lazy" decoding="async">
+                  </div>
+                  <h4>BLENDER</h4>
+                </li>
+                <li class="software__item reveal" data-reveal="up" data-delay="180">
+                  <div class="software__logo">
+                    <img src="assets/photoshop_logo.png" alt="Adobe Photoshop" loading="lazy" decoding="async">
+                  </div>
+                  <h4>ADOBE PHOTOSHOP</h4>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section contact-section">
+        <div class="container">
+          <h2 class="reveal" data-reveal="up">Hubungi Saya</h2>
+          <p class="contact__subtitle reveal" data-reveal="up" data-delay="90">
+            Punya pertanyaan? Kirim saya pesan, dan saya akan segera membalasnya.
+          </p>
+
+          <div class="contact__grid">
+          <!-- Kolom Hubungi -->
+          <div class="contact__form reveal" data-reveal="up" data-delay="120">
+            <div class="card-head">
+              <h3>Hubungi</h3>
+              <p>Ada yang ingin didiskusikan? Kirim saya pesan dan mari kita bicara.</p>
+            </div>
+            <form>
+              <form id="formContact">
+                <div class="input-group">
+                  <input id="name" type="text" placeholder=" " required />
+                  <label for="name">Nama Anda</label>
+                  <span class="icon">👤</span>
+                </div>
+                <div class="input-group">
+                  <input id="email" type="email" placeholder=" " required />
+                  <label for="email">Email Anda</label>
+                  <span class="icon">📧</span>
+                </div>
+                <div class="input-group">
+                  <textarea id="message" rows="4" placeholder=" " required></textarea>
+                  <label for="message">Pesan Anda…</label>
+                  <span class="icon">💬</span>
+                </div>
+                <div class="actions">
+                  <button type="submit" class="btn btn--primary btn-wave">Kirim Pesan</button>
+                  <a class="btn btn--ghost" id="waQuick">Tanya via WhatsApp</a>
+                </div>
+                <p class="form-note">Data tidak disimpan ke server — hanya dikirim ke email/WhatsApp kamu.</p>
+              </form>
+            </div>
+
+            <!-- Komentar kanan -->
+            <div class="contact__comments reveal" data-reveal="up" data-delay="180">
+              <div class="card-head">
+                <h3>💭 Comments </h3>
+              </div>
+              <form class="comment-form">
+                <label for="cname">Nama *</label>
+                <input id="cname" type="text" placeholder="Masukkan nama Anda" required />
+                <label for="cmsg">Pesan *</label>
+                <textarea id="cmsg" placeholder="Tulis pesan Anda di sini..." required></textarea>
+                <button type="submit" class="btn btn--ghost">Kirim Komentar</button>
+              </form>
+
+              <ul class="comment-list">
+                <li class="comment-item reveal" data-reveal="up" data-delay="60">
+                  <div class="avatar">A</div>
+                  <div class="bubble"><strong>Andi</strong><p>Portfolionya rapih banget! 🔥</p></div>
+                </li>
+                <li class="comment-item reveal" data-reveal="up" data-delay="120">
+                  <div class="avatar">S</div>
+                  <div class="bubble"><strong>Deni</strong><p>keren portofolio nya.</p></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div id="toast" class="toast" role="status" aria-live="polite" aria-hidden="true">
+          <span id="toastMsg">Terkirim!</span>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="container footer__inner">
+          <p>© <span id="year"></span> Pramudya Yuda Bhakti.</p>
+          <a href="#top" class="to-top" id="toTop" aria-label="Kembali ke atas">↑</a>
+        </div>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+  </html>
