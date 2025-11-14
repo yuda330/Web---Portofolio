@@ -223,6 +223,25 @@ function showToast(msg) {
   }, 2600);
 }
 
+/* ===== Hero CTA: Hubungi Saya (force scroll ke #contact) ===== */
+(function(){
+  const btn = document.getElementById("heroContactBtn");
+  const target = document.getElementById("contact");
+  if (!btn || !target) return;
+
+  const header = document.querySelector(".nav");
+  const getOffset = () => (header ? header.offsetHeight : 0) + 8;
+
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const top = window.scrollY + target.getBoundingClientRect().top - getOffset();
+    if (REDUCE){
+      window.scrollTo(0, top);
+    } else {
+      window.scrollTo({ top, behavior: "smooth" });
+    }
+  });
+})();
 
 document.getElementById("toTop")?.addEventListener("click", (e) => {
   e.preventDefault();
