@@ -252,7 +252,7 @@ section[id]{scroll-margin-top:80px}
   /* ❗ HANYA kolom Hubungi yang di-set lebarnya */
   .contact__form {
     max-width: 520px;
-    width: 100%;
+    width: 72%;
     margin-inline: auto;
   }
 }
@@ -260,7 +260,7 @@ section[id]{scroll-margin-top:80px}
 /* HP kecil / sedang */
 @media (max-width: 640px) {
   .container {
-    padding: 0 16px;
+    padding: 16px 0;
   }
 
   .section {
@@ -353,6 +353,7 @@ section[id]{scroll-margin-top:80px}
     margin-right: 53px;  /* opsional */
   }
 }
+
 
 
 
