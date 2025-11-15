@@ -252,7 +252,7 @@ section[id]{scroll-margin-top:80px}
   /* ❗ HANYA kolom Hubungi yang di-set lebarnya */
   .contact__form {
     max-width: 520px;
-    width: 50%;
+    width: 75%;
     margin-inline: auto;
   }
 }
@@ -353,6 +353,7 @@ section[id]{scroll-margin-top:80px}
     margin-right: 53px;  /* opsional */
   }
 }
+
 
 
 
