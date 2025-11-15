@@ -334,17 +334,7 @@ section[id]{scroll-margin-top:80px}
   }
 }
 
-    /* 🔥 animasi tetap aktif di mobile */
-    animation: typing-hero 1.8s steps(var(--chars), end) .3s both,
-               blink 1s step-end infinite 2.1s;
-  }
-}
 
-@media (min-width: 521px) and (max-width: 900px) {
-  .typewriter-hero {
-    font-size: clamp(26px, 6.2vw, 36px);
-  }
-}
 
 
 
