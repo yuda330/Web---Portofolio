@@ -260,7 +260,7 @@ section[id]{scroll-margin-top:80px}
 /* HP kecil / sedang */
 @media (max-width: 640px) {
   .container {
-    padding: 16px 0;
+    padding: 0 16px;
   }
 
   .section {
@@ -353,6 +353,7 @@ section[id]{scroll-margin-top:80px}
     margin-right: 53px;  /* opsional */
   }
 }
+
 
 
 
