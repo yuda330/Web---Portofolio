@@ -243,16 +243,16 @@ section[id]{scroll-margin-top:80px}
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* contact di HP / tablet – DUA2 NYA SAMA */
+  /* contact di HP / tablet */
   .contact__grid {
     grid-template-columns: 1fr;
     justify-items: center;
   }
 
-  .contact__form,
-  .contact__comments {
-    width: 100%;
-    max-width: 520px;   /* lebar card, sama untuk Hubungi & Comments */
+  /* ❗ HANYA kolom Hubungi yang di-set lebarnya */
+  .contact__form {
+    max-width: 520px;
+    width: 0%;
     margin-inline: auto;
   }
 }
@@ -281,6 +281,13 @@ section[id]{scroll-margin-top:80px}
   .tab {
     padding: 10px 16px;
     font-size: .95rem;
+  }
+
+  /* Card contact di-center dengan lebar enak dibaca */
+  .contact__form,
+  .contact__comments{
+    max-width: 520px;
+    margin-inline:auto;
   }
 }
 
@@ -321,19 +328,16 @@ section[id]{scroll-margin-top:80px}
     justify-content: center;
   }
   .typewriter-hero {
-    font-size: clamp(22px, 7vw, 28px);
-    white-space: normal;
-    border-right: 0;
-    animation: none;
+    font-size: clamp(15px, 7vw, 28px);
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid var(--caret);
+
+    /* 🔥 animasi tetap aktif di mobile */
+    animation: typing-hero 1.8s steps(var(--chars), end) .3s both,
+               blink 1s step-end infinite 2.1s;
   }
 }
-
-@media (min-width: 521px) and (max-width: 900px) {
-  .typewriter-hero {
-    font-size: clamp(26px, 6.2vw, 36px);
-  }
-}
-
 
 @media (min-width: 521px) and (max-width: 900px) {
   .typewriter-hero {
