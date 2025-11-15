@@ -42,27 +42,8 @@ section[id]{scroll-margin-top:80px}
 .intro__logo-shine{position:absolute; inset:0; transform:translateX(-120%); background:linear-gradient(120deg, transparent 0%, rgba(255,255,255,.35) 35%, transparent 70%); animation:shine 2.8s var(--ease) infinite}
 @keyframes shine{0%{transform:translateX(-120%)}60%{transform:translateX(120%)}100%{transform:translateX(120%)}}
 @keyframes tilt{0%{transform:perspective(800px) rotateX(8deg) rotateY(-8deg)}100%{transform:perspective(800px) rotateX(-6deg) rotateY(6deg)}}
-
-/* 🔧 diperbaiki supaya judul selalu di tengah */
-.intro__title{
-  margin:6px 0 6px;
-  font-size:28px;
-  min-height:1.2em;
-  display:flex;
-  justify-content:center;
-}
-
-/* 🔧 typewriter di-center penuh, awal–akhir animasi */
-.typewriter{
-  --caret:#e9eeff;
-  display:block;
-  margin-inline:auto;
-  text-align:center;
-  white-space:nowrap;
-  overflow:hidden;
-  border-right:2px solid var(--caret);
-  animation:typing 1.8s steps(22,end) .2s both, blink .9s step-end infinite 2s;
-}
+.intro__title{margin:6px 0 6px; font-size:28px; min-height:1.2em}
+.typewriter{--caret:#e9eeff; display:inline-block; white-space:nowrap; overflow:hidden; border-right:2px solid var(--caret); animation:typing 1.8s steps(22,end) .2s both, blink .9s step-end infinite 2s}
 @keyframes typing{from{width:0} to{width:22ch}}
 @keyframes blink{50%{border-color:transparent}}
 .intro__tagline{margin:4px 0 14px; color:var(--muted)}
@@ -131,7 +112,7 @@ section[id]{scroll-margin-top:80px}
   transform: translate(var(--foto-wrap-x, 0px), var(--foto-wrap-y, 0px));
   transition: transform 0.25s ease;
 }
-/* 🔧 Geser teks caption di bawah foto */
+  /* 🔧 Geser teks caption di bawah foto */
 .hero__img figcaption {
   transform: translate(var(--caption-x, -12px), var(--caption-y, 35px));
   transition: transform 0.25s ease;
@@ -353,8 +334,11 @@ section[id]{scroll-margin-top:80px}
   }
 }
 
+
 @media (min-width: 521px) and (max-width: 900px) {
   .typewriter-hero {
     font-size: clamp(26px, 6.2vw, 36px);
   }
 }
+
+
