@@ -253,7 +253,7 @@ section[id]{scroll-margin-top:80px}
   .contact__form {
     max-width: 520px;
     width: 0%;
-    margin-inline: auto;
+    margin-inline: overflow;
   }
 }
 
@@ -353,6 +353,7 @@ section[id]{scroll-margin-top:80px}
     margin-right: 53px;  /* opsional */
   }
 }
+
 
 
 
