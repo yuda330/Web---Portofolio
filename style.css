@@ -243,17 +243,17 @@ section[id]{scroll-margin-top:80px}
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* contact di HP / tablet */
+  /* contact di HP / tablet – DUA2 NYA SAMA */
   .contact__grid {
     grid-template-columns: 1fr;
     justify-items: center;
   }
 
-  /* ❗ HANYA kolom Hubungi yang di-set lebarnya */
-  .contact__form {
-    max-width: 520px;
-    width: 0%;
-    margin-inline: overflow;
+  .contact__form,
+  .contact__comments {
+    width: 100%;
+    max-width: 520px;   /* lebar card, sama untuk Hubungi & Comments */
+    margin-inline: auto;
   }
 }
 
@@ -281,13 +281,6 @@ section[id]{scroll-margin-top:80px}
   .tab {
     padding: 10px 16px;
     font-size: .95rem;
-  }
-
-  /* Card contact di-center dengan lebar enak dibaca */
-  .contact__form,
-  .contact__comments{
-    max-width: 520px;
-    margin-inline:auto;
   }
 }
 
@@ -328,14 +321,10 @@ section[id]{scroll-margin-top:80px}
     justify-content: center;
   }
   .typewriter-hero {
-    font-size: clamp(15px, 7vw, 28px);
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid var(--caret);
-
-    /* 🔥 animasi tetap aktif di mobile */
-    animation: typing-hero 1.8s steps(var(--chars), end) .3s both,
-               blink 1s step-end infinite 2.1s;
+    font-size: clamp(22px, 7vw, 28px);
+    white-space: normal;
+    border-right: 0;
+    animation: none;
   }
 }
 
@@ -345,23 +334,11 @@ section[id]{scroll-margin-top:80px}
   }
 }
 
-/* 🔧 Kontrol geser kolom Hubungi (hanya di mobile/tablet) */
-@media (max-width: 900px) {
-  .contact__form {
-    /* geser kiri/kanan di sini */
-    margin-left: 50px;   /* ➡️ ubah nilai ini untuk geser kiri/kanan */
-    margin-right: 53px;  /* opsional */
+
+@media (min-width: 521px) and (max-width: 900px) {
+  .typewriter-hero {
+    font-size: clamp(26px, 6.2vw, 36px);
   }
 }
-
-
-
-
-
-
-
-
-
-
 
 
